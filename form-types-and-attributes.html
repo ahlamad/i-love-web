@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D</title>
+</head>
+
+    <body>
+        <h1>Formulieren</h1>
+        <h2>Waarom heeft elke input een label nodig?</h2>
+        <p>Wanneer een gebruiker gefocused is op het elemnt zal de screenreader de label voorlezen.</p>
+
+        <h3>DEMO:</h3>
+        <form action="#">
+            <fieldset>
+            <legend>Wie is jouw favoriete studentcoach?</legend>
+            <input type="radio" id="koop" name="fav-coach">
+            <label for="koop">Koop</label><br>
+            <p>DE ONDERSTAANDE INPUT TYPE HEEFT GEEN LABEL DAAROM ZIE JE HEM NIET</p>
+            <input type="radio" id="krijn" name="fav-coach">
+            <input type="radio" id="sanne" name="fav-coach">
+            <label for="sanne">Sanne</label><br> 
+            <input type="submit" value="Submit">        
+            </fieldset>   
+        </form>
+
+        <h3>Wat doe je met attributen type, autocomplete, inputmode en enterkeyhint?</h3>
+        <ol>
+            <li>
+                <p>Met type-attributen kan je verschillende interactieve elementen maken voor webformulieren.</p>
+            </li>
+            <li>
+                <p>Met autocomplete kan je de browser gegevens van de gebruiker laten invullen op basis van eerdere of opgeslagen profielen.</p>
+            </li>
+            <li>
+                <p>Met inputmode kan je aangeven welk toetsenbord er geopend moet worden.</p>
+            </li>
+            <li>
+                <p>Met enterkeyhint geef je aan welke test op de ENTER-toets komt te staan.</p>
+            </li>
+        </ol>
+
+        <h4>Voorbeelden van type-attributen die je kan gebruiken en stylen:</h4>
+        <form action="#">
+            <fieldset>
+                <legend>Search/Zoekveld</legend>
+                <input type="search" placeholder="Type hier een naam">
+                <input type="submit" value="Zoeken">
+            </fieldset>
+        </form>
+
+        <form action="#">
+            <label for="kleur">Kier een kleur:</label>
+            <input type="color" value="#6495ED">
+            <input type="color" value="#DC143C">
+            <input type="color" value="#008B8B">
+            <input type="color" value="#BDB76B">
+            <input type="submit" value="Verstuur">
+        </form>
+        
+
+        <form action="#">
+            <label for="telefoon-nummer">Telefoonnummer:</label>
+            <input type="tel" name="telefoon-nummer" id="nummer" placeholder="+31 6........">
+            <input type="submit" value="Verstuur">
+        </form>
+
+        <form>
+            <label>Kies een datum:</label>
+            <input type="date">
+            <input type="submit" value="Verstuur">
+        </form>
+
+        <form action="#">
+            <label>Klik op de afbeelding om te versturen:</label><br>
+            <input type="image" src="https://media.licdn.com/dms/image/v2/C4E0BAQF2ghqanLmxSw/company-logo_200_200/company-logo_200_200/0/1647550545210/submit_com_logo?e=2147483647&v=beta&t=0y-IC9EGCPaw4Dnor7E4RRHEFsS_G6fbAs6IP2wZ-pY" alt="Submit afbeelding">
+        </form>
+
+
+        <h4>Autocomplete</h4>
+        <h5>Profiel Formulier met Autocomplete</h5>
+        <form>
+            <label for="name">Naam:</label>
+            <input type="text" name="name" autocomplete="name" placeholder="Vul je naam hier in">
+            <label for="e-mail">E-mail:</label>
+            <input type="email" name="email" autocomplete="email" placeholder="Vul je e-mail hier in">
+            <label for="telefoon">Telefoonnumer:</label>
+            <input type="tel" name="tel" autocomplete="tel" placeholder="Vul je telefoonnumer hier in">
+            <input type="submit"></button>
+        </form>
+
+        <h5>Profiel Formulier zonder Autocomplete</h5>
+        <form>
+            <label for="name">Naam:</label>
+            <input type="text" name="naam123" placeholder="Vul je naam hier in"><br>
+            <label for="e-mail">E-mail:</label>
+            <input type="email" name="email1" placeholder="Vul je e-mail hier in"><br>
+            <label for="telefoon">Telefoonnumer:</label>
+            <input type="tel" name="tell" placeholder="Vul je telefoonnumer hier in"><br>
+            <input type="submit"></button>
+        </form>
+
+
+        <h4>Inputmode</h4>
+        <!-- Numeriek toetsenbord zal op mobiel verschijnen -->
+        <form action="">
+            <label>Telefoonnummer:</label>
+            <input type="text" inputmode="numeric" placeholder="+31678349054"><br>
+        </form>
+
+        <!-- Zonder inputmode -->
+        <form action="">
+        <label>Telefoonnummer (zonder inputmode):</label>
+        <input type="text" placeholder="+31678349054">
+        </form>
+
+        <h4>Enterkeyhint</h4>
+        <form action="#">
+            <!-- Op mobiel verschijnt op de enter toets "Search" -->
+            <label for="zoeken">Zoeken:</label>
+            <input type="text" enterkeyhint="search" placeholder="Typ iets en druk op Enter">
+        </form>
+
+    </body>
+</html>

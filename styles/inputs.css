@@ -1,0 +1,9 @@
+input:checked + label {
+  color: red;
+  font-weight: bold;
+}
+
+#picture {
+display: flex;
+
+}
