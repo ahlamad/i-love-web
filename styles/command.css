@@ -1,0 +1,47 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+
+/* SECTION */
+#my-img {
+  transition: 2s ease-in-out;
+}
+
+/* SECTION */
+.command-voker-spinners {
+  display: flex;
+  flex-direction: column;
+}
+
+/* SECTION */
+meter {
+  display: none;
+}
+
+.meter-stars {
+  position: relative;
+  display: inline-block;
+  font-size: 28px; 
+  letter-spacing: 2px;
+}
+
+.meter-stars::before {
+  content: "★★★★★";  
+  color: rgb(3, 3, 3);
+}
+
+.meter-stars span {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  overflow: hidden;   
+  white-space: nowrap;
+  color: rgb(47, 0, 255);
+  width: 78%;
+}
+
+.meter-stars span::before {
+  content: "★★★★★"; 
+}
+}
