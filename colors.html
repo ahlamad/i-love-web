@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <p>Salmon</p>
+        <p>Salmon</p>
+        <p>Salmon</p>
+        <p>Salmon</p>
+    </main>
+    
+</body>
+</html>
+
+<style>
+    p {
+        font-size: xx-large;
+        font-weight: 600;
+    }
+
+    p:nth-of-type(2) {
+        color: rgb(225, 120, 100);
+    }
+
+    p:nth-of-type(3) {
+        color: hsl(6, 93%, 71%);
+    }
+
+    p:nth-of-type(4) {
+        --h: 6;
+        --s: 93%;
+        --l: 71%;
+        --a: 100;
+        background: hsl(var(--h) var(--s) var(--l) / var(--a));
+
+        &:hover {
+            --l: 75%;
+        }
+
+        &:focus, &:active {
+            --s: 50%;
+        }
+        
+        &[disabled] {
+            --s: 0;
+        }
+    }
+</style>
